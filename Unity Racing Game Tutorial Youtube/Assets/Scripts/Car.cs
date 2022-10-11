@@ -4,6 +4,7 @@ using UnityEngine;
 
 public class Car : MonoBehaviour
 {
+    public float acceleration = 1;
     Rigidbody rigid;
     // Start is called before the first frame update
     void Start()
@@ -23,6 +24,6 @@ public class Car : MonoBehaviour
         //    transform.position += transform.forward * -0.01f;
         //}
         float inputVertical = Input.GetAxis("Vertical");
-        rigid.AddForce(transform.forward * inputVertical);
+        rigid.AddForce(transform.forward * inputVertical * Time.deltaTime * acceleration);
     }
 }
