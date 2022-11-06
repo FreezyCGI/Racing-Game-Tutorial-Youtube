@@ -47,7 +47,6 @@ public class Car : MonoBehaviour
                 axis.rightWheel.steerAngle = inputHorizontal * rotationSpeed;
             }
         }
-
     }
 }
 
